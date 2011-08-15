@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence>
+    <persistence-unit name="jpaUnit">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+        <class>pattern.part3.chapter7.domain.User</class>
+        <class>pattern.part3.chapter7.domain.UserLog</class>
+
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:hsqldb:mem:user"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
+            <property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver"/>
+            <property name="hibernate.connection.password" value=""/>
+            <property name="hibernate.connection.username" value="sa"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="false"/>
+        </properties>
+    </persistence-unit>
+</persistence>
